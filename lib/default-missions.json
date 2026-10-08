@@ -1,0 +1,75 @@
+[
+  {
+    "id": "e6662480-2530-4a1f-897d-b37042c63457",
+    "title": "Nattuppdrag",
+    "text": "En stor fabrik har avslutat sitt nattskift. Nu minskar elförbrukningen",
+    "productionWatts": 1000
+  },
+  {
+    "id": "fc40cce4-0b01-4a80-87c5-945ec7eaf481",
+    "title": "Nattuppdrag",
+    "text": "Det är en helt vindstilla natt. Vindkraftverken producerar nästan ingen el!",
+    "consumptionWatts": 998
+  },
+  {
+    "id": "ae5f2a4d-d890-4e87-9622-79fc37c4544e",
+    "title": "Nattuppdrag",
+    "text": "Ett datacenter har fått ett tekniskt fel och stänger tillfälligt ner delar av verksamheten!",
+    "consumptionWatts": 0,
+    "productionWatts": 1000
+  },
+  {
+    "id": "0aa42ae0-360d-42d1-875b-e505154e1fe7",
+    "title": "Morgonuppdrag",
+    "text": "Ett datacenter startar en stor säkerhetskopiering av information. Det kräver extra mycket el!",
+    "consumptionWatts": 1000
+  },
+  {
+    "id": "bd1128fb-757b-4f5d-8440-9f6633cfb28d",
+    "title": "MorgonUppdrag",
+    "text": "Det är en dimmig och vindstilla morgon. Vindkraften producerar nästan ingenting!",
+    "consumptionWatts": 700
+  },
+  {
+    "id": "48a8d8fc-2dfc-4eba-92ac-d2805e0f9145",
+    "title": "MorgonUppdrag",
+    "text": "Alla på fabriken sätter på kaffemaskinen och det drar mer el!",
+    "consumptionWatts": 498
+  },
+  {
+    "id": "dc0ac1b8-7279-476b-803f-1101b3f82713",
+    "title": "Eftermiddagsuppdrag",
+    "text": "Gamingfeber! \"Ett nytt jättestort datorspel har precis släppts! Tusentals spelare loggar in samtidigt och datacentren får jobba hårt.",
+    "consumptionWatts": 800
+  },
+  {
+    "id": "ab4fd726-0fe2-4212-91d7-1238afc728d7",
+    "title": "Eftermiddagsuppdrag",
+    "text": "En chokladfabrik har fått en rekordstor beställning och startar alla sina maskiner samtidigt. Nu behövs extra mycket el!",
+    "consumptionWatts": 900
+  },
+  {
+    "id": "f9d4fc8b-a37b-4b06-b98b-197defafa2dd",
+    "title": "Eftermiddagsuppdrag",
+    "text": "En flock fåglar har orsakat ett tillfälligt stopp vid en vindkraftspark. Flera vindkraftverk pausas medan problemet undersöks.",
+    "consumptionWatts": 600
+  },
+  {
+    "id": "a429e0a3-3363-4fc8-b019-88514274ca67",
+    "title": "Kvällsuppdrag",
+    "text": "Arbetsdagen är slut och flera stora fabriker stänger av sina maskiner. Elförbrukningen sjunker!",
+    "productionWatts": 787
+  },
+  {
+    "id": "dc76cfb7-191c-45ac-b5bc-84f4f8677334",
+    "title": "Kvällsuppdrag",
+    "text": "VM-final! Fotbolls-VM börjar ikväll! Miljontals människor följer matchen via streaming och datacentren får hantera den höga belastningen.",
+    "consumptionWatts": 1000
+  },
+  {
+    "id": "98417a8d-f217-471f-8aa9-4af33b606592",
+    "title": "Kvällsuppdrag",
+    "text": "Ett stort datacenter startar miljontals AI-beräkningar samtidigt som solen går ner. Nu förändras balansen snabbt!",
+    "consumptionWatts": 1000
+  }
+]
