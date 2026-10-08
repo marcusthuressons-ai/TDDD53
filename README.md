@@ -8,7 +8,7 @@
 
 You need **Node.js and a web browser**. npm installs the application's dependencies; Python and pip are not required. The local database runs with the application, so you do not need to install a separate database server.
 
-1. Download the project and extract it to a folder, for example `TDDD53_Webb_app`. Keep both `work/` and `outputs/`, including the hidden configuration files inside `work/`.
+1. Get the project either by cloning the GitHub repository or by extracting `Arstidsrummet-kallkod.zip`. A GitHub clone has `package.json` and this README directly in its root. The release zip has the application inside `work/`. Keep the included hidden configuration files in either case.
 2. Install **Node.js 24 LTS**, including npm, from the [official Node.js download page](https://nodejs.org/en/download). The project requires Node.js 22.13.0 or later. Use the installer for your operating system and keep the option that adds Node.js to PATH.
 3. Open a new terminal after installation. On Windows, open the project folder in File Explorer, type `cmd` in the address bar, and press Enter. This opens Command Prompt in the project folder. On macOS or Linux, open a terminal and navigate to the extracted folder.
 4. Check that Node.js and npm are available:
@@ -18,11 +18,14 @@ You need **Node.js and a web browser**. npm installs the application's dependenc
    npm --version
    ```
 
-5. Enter the application folder:
+5. Open the application folder containing `package.json`:
 
-   ```sh
-   cd work
-   ```
+   - **GitHub clone:** use the cloned repository root. Do not run `cd work`; the application files are already in this folder.
+   - **Release zip:** open the extracted folder, then run:
+
+     ```sh
+     cd work
+     ```
 
 6. For a **fresh installation**, run these commands one at a time. Wait for each command to finish successfully before continuing:
 
@@ -39,7 +42,7 @@ Internet access is needed for installation and for retrieving yesterday's weathe
 
 ### Starting the app next time
 
-Open a terminal in `work/` and run:
+Open a terminal in the folder containing `package.json` (the repository root for a GitHub clone, or `work/` for the release zip) and run:
 
 ```sh
 npm run dev
@@ -51,7 +54,7 @@ You do not need to install dependencies, build, or initialize the database every
 
 The fresh-installation command creates the mission database using the Cloudflare D1 binding `DB`, declared in `.openai/hosting.json`. **Run that database initialization only once per fresh local database.** If an existing installation already has its database, skip the migration command.
 
-Saved missions are stored under `work/.wrangler/state/`. Keep this directory to retain your missions. The source includes the author's 12 saved missions in `lib/default-missions.json`, including their saved power, season, sunlight, and wind settings where present. On first use, the app automatically imports these missions if no mission library exists. Existing libraries are never overwritten, and a library intentionally saved empty stays empty. New users can edit or delete the imported missions through **Mina uppdrag**. The included missions are a snapshot; later edits on the author's computer do not automatically update the shared defaults.
+Saved missions are stored in `.wrangler/state/` inside the application folder. Keep this directory to retain your missions. The source includes the author's 12 saved missions in `lib/default-missions.json`, including their saved power, season, sunlight, and wind settings where present. On first use, the app automatically imports these missions if no mission library exists. Existing libraries are never overwritten, and a library intentionally saved empty stays empty. New users can edit or delete the imported missions through **Mina uppdrag**. The included missions are a snapshot; later edits on the author's computer do not automatically update the shared defaults.
 
 ### Ports and the Windows launcher
 
@@ -71,7 +74,7 @@ The existing `outputs/Starta-Arstidsrummet.cmd` launcher uses the author's Codex
 
 - **`node` or `npm` is not recognized:** reopen the terminal after installing Node.js. If necessary, rerun the installer with the PATH option enabled.
 - **PowerShell blocks `npm.ps1`:** use Command Prompt on Windows, or use `npm.cmd` instead of `npm` in the commands above.
-- **`package.json` cannot be found:** check that the terminal is in `work/`.
+- **`package.json` cannot be found:** check that the terminal is in the folder containing `package.json`.
 - **The migration reports that the table already exists:** the database has already been initialized. Skip the migration and start the app.
 - **Installation fails:** check your internet connection and Node.js version. Fix the reported error before continuing to the next command.
 
@@ -178,5 +181,6 @@ The scripts support portable execution on Windows, macOS, and Linux. A configure
 - **Mission gauge stays centred:** set unequal consumption and production values and save. The gauge intentionally returns to the centre before a card change.
 - **Weather gauge stays centred:** the current hour may have no sunlight and insufficient wind to generate power in the model.
 - **Port or server conflict:** stop the previous development process and restart, using the printed server address.
+
 
 
